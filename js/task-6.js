@@ -11,7 +11,7 @@ const buttonDestroy = document.querySelector('button[data-destroy]');
 const divBoxes = document.getElementById('boxes');
 
 buttonCreate.addEventListener('click', createBoxesNumber);
-function createBoxesNumber(amount) {
+function createBoxesNumber() {
   const amount = parseInt(inputEl.value);
   if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
@@ -25,6 +25,7 @@ function createBoxes(amount) {
     const box = document.createElement('div');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
+    box.style.margin = 10 + 'px';
     box.style.background = getRandomHexColor();
     divBoxes.appendChild(box);
     size += 10;
