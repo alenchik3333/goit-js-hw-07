@@ -12,6 +12,7 @@ const divBoxes = document.getElementById('boxes');
 
 buttonCreate.addEventListener('click', createBoxesNumber);
 function createBoxesNumber() {
+  destroyBoxes();
   const amount = parseInt(inputEl.value);
   if (amount >= 1 && amount <= 100) {
     createBoxes(amount);
@@ -21,7 +22,7 @@ function createBoxesNumber() {
 
 function createBoxes(amount) {
   let size = 30;
-  for (let i = 0; i <= amount; i++) {
+  for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.style.width = `${size}px`;
     box.style.height = `${size}px`;
