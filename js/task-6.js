@@ -21,6 +21,7 @@ function createBoxesNumber() {
 }
 
 function createBoxes(amount) {
+  const fragment = document.createDocumentFragment();
   let size = 30;
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
