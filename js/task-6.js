@@ -29,9 +29,10 @@ function createBoxes(amount) {
     box.style.height = `${size}px`;
     box.style.margin = 10 + 'px';
     box.style.background = getRandomHexColor();
-    divBoxes.appendChild(box);
+    fragment.appendChild(box);
     size += 10;
   }
+  divBoxes.appendChild(fragment);
 }
 
 buttonDestroy.addEventListener('click', destroyBoxes);
